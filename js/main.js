@@ -86,15 +86,3 @@ slider.goTo = function (number) {
 // initialize top slider in home page
 slider.init($('#top-slider'));
 
-var carouseTop = $("#carousel-top .items"), carouselBottom = $("#carousel-bottom .items");
-
-//initialize itemslide
-carouseTop.itemslide(); 
-carouselBottom.itemslide();
-
-// recalculate width and center positions and sizes when window is resized
-$(window).resize(function () {
-	carouseTop.reload();
-	carouselBottom.reload();
-}); 
-
