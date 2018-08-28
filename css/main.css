@@ -1,0 +1,210 @@
+/* helper */
+/* color */
+/* size */
+/* base */
+/* font */
+@font-face {
+  font-family: 'vazir-light';
+  src: url("../fonts/Vazir-light.woff") format("woff"), url("../fonts/Vazir-light.ttf") format("truetype");
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'vazir-bold';
+  src: url("../fonts/Vazir-bold.woff") format("woff"), url("../fonts/Vazir-bold.ttf") format("truetype");
+  font-weight: bold; }
+
+/* general */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent; }
+
+*:focus {
+  outline: none; }
+
+body {
+  background: #fbfbfb;
+  font-family: 'vazir-light';
+  font-size: 14px;
+  margin: 0;
+  padding: 0; }
+
+/* layout */
+#header {
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 24px;
+  background: #60ad67;
+  z-index: 10; }
+  #header > div {
+    float: right;
+    width: 33.33%;
+    display: inline-block; }
+  @media (max-width: 384px) {
+    #header {
+      padding: 24px 20px; } }
+  #header .right .menu-button {
+    width: 27px; }
+  #header .center {
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 5px; }
+  #header .left {
+    text-align: left; }
+    #header .left .logo {
+      width: 27px; }
+
+/* pages */
+.home {
+  margin-top: 89px; }
+  .home .top .wrapper {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden; }
+    .home .top .wrapper .slider {
+      display: flex;
+      width: 400%; }
+      .home .top .wrapper .slider .item {
+        display: table;
+        width: 100%; }
+        .home .top .wrapper .slider .item .right, .home .top .wrapper .slider .item .left {
+          display: table-cell;
+          width: 10px;
+          background: #f3f3f3; }
+        .home .top .wrapper .slider .item .right {
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px; }
+        .home .top .wrapper .slider .item .center {
+          display: table-cell;
+          padding: 0 14px; }
+          @media (max-width: 384px) {
+            .home .top .wrapper .slider .item .center {
+              padding: 0 6px; } }
+          .home .top .wrapper .slider .item .center img {
+            width: 100%;
+            border-radius: 5px;
+            vertical-align: middle; }
+        .home .top .wrapper .slider .item .left {
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px; }
+  .home .top .pagination {
+    text-align: center;
+    margin-top: -6px; }
+    .home .top .pagination > div {
+      width: 7px;
+      height: 7px;
+      border-radius: 50px;
+      background: #fcda78;
+      display: inline-block;
+      margin-right: 5px; }
+    .home .top .pagination .active {
+      background: #fff4d2; }
+  .home .content {
+    padding: 0 24px; }
+    @media (max-width: 384px) {
+      .home .content {
+        padding: 0 20px; } }
+    .home .content #carousel-top, .home .content #carousel-bottom {
+      overflow: hidden; }
+    .home .content .title {
+      color: #424242;
+      font-family: 'vazir-bold';
+      font-size: 18px;
+      margin-bottom: 15px; }
+    .home .content .items {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 0 14px;
+      margin-bottom: 20px;
+      z-index: 1;
+      width: auto !important; }
+      @media (max-width: 384px) {
+        .home .content .items {
+          grid-gap: 0 5px; } }
+      .home .content .items .item {
+        position: relative;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 1px 1px 1px  #eee;
+        cursor: pointer;
+        height: 194px;
+        overflow: hidden;
+        border: 1px solid transparent; }
+        @media (max-width: 374px) {
+          .home .content .items .item {
+            height: 167px; } }
+        @media (min-width: 375px) and (max-width: 384px) {
+          .home .content .items .item {
+            height: 171px; } }
+        .home .content .items .item .percent {
+          position: absolute;
+          top: 8px;
+          left: 10px;
+          width: 17px;
+          height: 17px;
+          border-radius: 50px;
+          text-align: center;
+          background: #f88266;
+          color: #ffffff; }
+          @media (max-width: 375px) {
+            .home .content .items .item .percent {
+              top: 7px;
+              left: 7px; } }
+        .home .content .items .item img {
+          display: block;
+          margin-top: 19px;
+          text-align: center;
+          clear: left;
+          margin-left: auto;
+          margin-right: auto;
+          width: 63px; }
+          @media (max-width: 385px) {
+            .home .content .items .item img {
+              width: 45px; } }
+        .home .content .items .item .name {
+          color: #545454;
+          font-family: 'vazir-bold';
+          padding-right: 10px;
+          margin-top: 10px; }
+          @media (max-width: 375px) {
+            .home .content .items .item .name {
+              padding-right: 7px; } }
+        .home .content .items .item p {
+          color: #a9a9a9;
+          margin: 0 0 8px 0;
+          padding-right: 10px;
+          font-size: 14px; }
+          @media (max-width: 374px) {
+            .home .content .items .item p {
+              padding-right: 7px;
+              font-size: 11px; } }
+          @media (min-width: 375px) and (max-width: 384px) {
+            .home .content .items .item p {
+              font-size: 13px; } }
+        .home .content .items .item .price {
+          background: #fbfbfb;
+          padding: 4px 10px;
+          height: 52px; }
+          @media (max-width: 375px) {
+            .home .content .items .item .price {
+              padding-right: 7px; } }
+          .home .content .items .item .price .old {
+            color: #f88266;
+            font-size: 10px; }
+          .home .content .items .item .price .new {
+            color: #60ad67;
+            font-family: 'vazir-bold'; }
+            @media (max-width: 375px) {
+              .home .content .items .item .price .new {
+                font-size: 12px; } }
+        .home .content .items .item:hover {
+          border: 1px solid #f88266; }
+  .home .animating {
+    transition: transform 400ms cubic-bezier(0.5, 0, 0.5, 1); }

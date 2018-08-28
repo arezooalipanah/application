@@ -1,0 +1,27 @@
+/* font */
+@font-face 
+	font-family: 'vazir-light'
+	src: url('../fonts/Vazir-light.woff') format('woff'), url('../fonts/Vazir-light.ttf') format('truetype')
+	font-weight: normal
+
+@font-face
+	font-family: 'vazir-bold';
+	src: url('../fonts/Vazir-bold.woff') format('woff'), url('../fonts/Vazir-bold.ttf') format('truetype')
+	font-weight: bold
+
+/* general */
+*
+	box-sizing: border-box
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+	-webkit-tap-highlight-color: transparent
+
+*
+	&:focus
+		outline: none
+
+body
+	background: $body
+	font-family: 'vazir-light'
+	font-size: $font
+	margin: 0
+	padding: 0

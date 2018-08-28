@@ -1,0 +1,136 @@
+.home
+	margin-top: 89px
+	.top
+		.wrapper
+			position: relative
+			width: 100%
+			cursor: pointer
+			overflow: hidden
+			.slider
+				display: flex
+				width: 400%
+				.item
+					display: table
+					width: 100%
+					.right, .left
+						display: table-cell
+						width: 10px
+						background: #f3f3f3
+					.right
+						border-top-left-radius: 5px
+						border-bottom-left-radius: 5px
+					.center
+						display: table-cell
+						padding: 0 14px
+						@media (max-width: 384px)
+							padding: 0 6px
+						img
+							width: 100%
+							border-radius: 5px
+							vertical-align: middle
+					.left
+						border-top-right-radius: 5px
+						border-bottom-right-radius: 5px
+		.pagination
+			text-align: center
+			margin-top: -6px
+			> div
+				width: 7px
+				height: 7px
+				border-radius: 50px
+				background: #fcda78
+				display: inline-block
+				margin-right: 5px
+			.active
+				background: #fff4d2
+	.content
+		padding: 0 24px
+		@media (max-width: 384px)
+			padding: 0 20px
+		#carousel-top, #carousel-bottom
+			overflow: hidden
+		.title
+			color: $home-title
+			font-family: 'vazir-bold'
+			font-size: $font + 4
+			margin-bottom: 15px
+		.items
+			display: grid
+			grid-template-columns: auto auto auto
+			grid-gap: 0 14px
+			margin-bottom: 20px
+			z-index: 1
+			width: auto !important
+			@media (max-width: 384px)
+				grid-gap: 0 5px
+			.item
+				position: relative
+				background: $white
+				border-radius: 8px
+				box-shadow: 1px 1px 1px  #eee
+				cursor: pointer
+				height: 194px
+				overflow: hidden
+				border: 1px solid transparent
+				@media (max-width: 374px)
+					height: 167px
+				@media (min-width: 375px) and (max-width: 384px)
+					height: 171px
+				.percent
+					position: absolute
+					top: 8px
+					left: 10px
+					width: 17px
+					height: 17px
+					border-radius: 50px
+					text-align: center
+					background: $red
+					color: $white
+					@media (max-width: 375px)
+						top: 7px
+						left: 7px
+				img
+					display: block
+					margin-top: 19px
+					text-align: center
+					clear: left
+					margin-left: auto
+					margin-right: auto
+					width: 63px
+					@media (max-width: 385px)
+						width: 45px
+				.name
+					color: #545454
+					font-family: 'vazir-bold'
+					padding-right: 10px
+					margin-top: 10px;
+					@media (max-width: 375px)
+						padding-right: 7px
+				p
+					color: #a9a9a9
+					margin: 0 0 8px 0
+					padding-right: 10px
+					font-size: $font
+					@media (max-width: 374px)
+						padding-right: 7px
+						font-size: $font - 3
+					@media (min-width: 375px) and (max-width: 384px)
+						font-size: $font - 1
+				.price
+					background: #fbfbfb
+					padding: 4px 10px
+					height: 52px
+					@media (max-width: 375px)
+						padding-right: 7px
+					.old
+						color: $red
+						font-size: $font - 4
+					.new
+						color: $green
+						font-family: 'vazir-bold'
+						@media (max-width: 375px)
+							font-size: $font - 2
+				&:hover
+					border: 1px solid $red
+	.animating
+		transition: transform 400ms cubic-bezier(0.5, 0, 0.5, 1)
